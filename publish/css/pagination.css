@@ -1,0 +1,108 @@
+/*
+|--------------------------------------------------------------------------
+| Pagination
+|--------------------------------------------------------------------------
+*/
+    
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+}
+
+.pagination .page-item {
+    display: inline;
+}
+
+.pagination .page-item:first-child .page-link {
+    margin-left: 0;
+    -webkit-border-top-left-radius: .25rem;
+    border-top-left-radius: .25rem;
+    -webkit-border-bottom-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pagination .page-item:last-child .page-link {
+    -webkit-border-top-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+    -webkit-border-bottom-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item.active .page-link:focus,
+.pagination .page-item.active .page-link:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
+
+.pagination .page-item.disabled .page-link,
+.pagination .page-item.disabled .page-link:focus,
+.pagination .page-item.disabled .page-link:hover {
+    color: #818a91;
+    cursor: not-allowed;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.pagination .page-link {
+    position: relative;
+    float: left;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.5;
+    color: #0275d8;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination .page-link:focus,
+.pagination .page-link:hover {
+    color: #014c8c;
+    background-color: #eceeef;
+    border-color: #ddd;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Per page
+|--------------------------------------------------------------------------
+*/
+
+#per-page-form label {
+    display: block;
+    color: #343434;
+    margin-bottom: 5px;
+}
+
+#per-page-form select {
+    background-color: #f6f8fa;
+    padding: 4px;
+    font-size: 0.92em;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 0 #DCDADA, 0 -1px #FAF9F9 inset;
+    -moz-box-shadow: 0 1px 0 #DCDADA, 0 -1px #FAF9F9 inset;
+    box-shadow: 0 1px 0 #DCDADA, 0 -1px #FAF9F9 inset;
+    color: #343434;
+}
+#per-page-form select:hover {
+    background-color: #ECEAEA;
+    transition: all 0.3s;
+}
+#per-page-form select:focus {
+    background-color: #FAF9F9;
+    transition: all 0.3s;
+}
