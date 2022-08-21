@@ -98,7 +98,7 @@ php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginatio
 
 Publish only **CSS** file :
 ```
-php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=public
+php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=css
 ```
 
 

@@ -32,7 +32,7 @@ class ManPaginationServiceProvider extends ServiceProvider
 
         $this->publishes([
             $this->getCssPath() => public_path('vendor/man-pagination/css'),
-        ], 'public');
+        ], 'css');
     }
 
     /**
