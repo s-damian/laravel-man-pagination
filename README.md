@@ -48,13 +48,13 @@ This library is developed by [Stephen Damian](https://www.linkedin.com/in/stephe
 
 ## Summary
 
-- [Installation](#installation)
-- [Customization with "vendor:publish"](#customization-with-vendorpublish)
-- [Pagination instance methods](#pagination-instance-methods)
-- [Examples](#examples)
-- [Differences with Laravel integrated pagination](#differences-with-Laravel-integrated-pagination)
-- [Support](#support)
-- [License](#license)
+* [Installation](#installation)
+* [Customization with "vendor:publish"](#customization-with-vendorpublish)
+* [Pagination instance methods](#pagination-instance-methods)
+* [Examples](#examples)
+* [Differences with Laravel integrated pagination](#differences-with-Laravel-integrated-pagination)
+* [Support](#support)
+* [License](#license)
 
 
 ## Installation
