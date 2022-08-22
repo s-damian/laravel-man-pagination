@@ -48,18 +48,19 @@ This library is developed by [Stephen Damian](https://www.linkedin.com/in/stephe
 
 ## Summary
 
-* Installation
-* Customization with "vendor:publish"
-* Pagination instance methods
-* Examples
-* Differences with Laravel integrated pagination
-* Support
-* License
+- [Installation](#installation)
+- [Customization with "vendor:publish"](#customization-with-vendorpublish)
+- [Pagination instance methods](#pagination-instance-methods)
+- [Examples](#examples)
+- [Differences with Laravel integrated pagination](#differences-with-Laravel-integrated-pagination)
+- [Support](#support)
+- [License](#license)
 
 
 ## Installation
 
 Installation via Composer:
+
 ```
 composer require s-damian/laravel-man-pagination
 ```
@@ -70,6 +71,7 @@ composer require s-damian/laravel-man-pagination
 ### Custom Config and Lang and CSS
 
 After installing the package, you can to run the **vendor:publish** command:
+
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider"
 ```
@@ -87,16 +89,19 @@ You can of course customize these files.
 ### "vendor:publish" with "--tag" argument
 
 Publish only **config** file :
+
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=config
 ```
 
 Publish only **lang** files :
+
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=lang
 ```
 
 Publish only **CSS** file :
+
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=css
 ```
@@ -207,6 +212,7 @@ $ordersAndInvoices = DB::select('
 Here is a simple example, following the MVC pattern, of how to use this library:
 
 #### Controller
+
 ```php
 <?php
 
@@ -246,6 +252,7 @@ class CustomerController extends Controller
 ```
 
 #### View
+
 ```html
 <div style="text-align: center;">
     @foreach ($customers as $customer)
