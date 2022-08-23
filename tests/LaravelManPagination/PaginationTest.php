@@ -5,17 +5,22 @@ namespace SDamian\Tests\LaravelManPagination;
 use SDamian\Tests\TestCase;
 use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Pagination;
+use SDamian\Tests\LaravelManPagination\Traits\ForAllTestsTrait;
 
 /**
  * We do the "basic" tests.
  */
 class PaginationTest extends TestCase
 {
+    use ForAllTestsTrait;
+
     /**
      * Test Pagination Instance Methods.
      */
     public function testPagination(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
@@ -52,6 +57,8 @@ class PaginationTest extends TestCase
      */
     public function testOtherPublicMethods(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();

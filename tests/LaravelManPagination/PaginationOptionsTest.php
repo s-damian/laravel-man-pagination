@@ -5,17 +5,22 @@ namespace SDamian\Tests\LaravelManPagination;
 use SDamian\Tests\TestCase;
 use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Pagination;
+use SDamian\Tests\LaravelManPagination\Traits\ForAllTestsTrait;
 
 /**
  * We test the options of the constructor.
  */
 class PaginationOptionsTest extends TestCase
 {
+    use ForAllTestsTrait;
+
     /**
      * We test the options (with the default values).
      */
     public function testPaginationWithOptionsDefault(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 2);
 
         $pagination = new Pagination();
@@ -47,6 +52,8 @@ class PaginationOptionsTest extends TestCase
      */
     public function testPaginationWithOptionsChanged(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 2);
 
         $pagination = new Pagination([

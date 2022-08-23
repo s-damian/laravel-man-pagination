@@ -5,20 +5,25 @@ namespace SDamian\Tests\LaravelManPagination;
 use SDamian\Tests\TestCase;
 use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Pagination;
+use SDamian\Tests\LaravelManPagination\Traits\ForAllTestsTrait;
 
 /**
  * Some methods are tested individually.
  */
 class PaginationMethodsTest extends TestCase
 {
+    use ForAllTestsTrait;
+
     public function testCurrentPage(): void
     {
+        $this->verifyInAllTests();
+
         $pagination = new Pagination();
 
         $pagination->paginate(100);
 
         $this->assertSame(1, $pagination->currentPage()); // si Request::query('page') n'existe pas, prend la valeur de 1 par défaut
-        $this->assertTrue(Request::query('page') === null);
+        $this->assertTrue(Request::query(config('man-pagination.page_name')) === null);
 
         // On simule qu'on se positionne sur une page d'après la dernière page (donc on simule qu'on est une page qui n'existe pas).
         // Il existe que 7 pages, et on se positionne sur la 9ème.
@@ -36,6 +41,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testHasPagesMethod(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 1);
 
         $pagination = new Pagination();
@@ -64,6 +71,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testHasMorePagesMethod(): void
     {
+        $this->verifyInAllTests();
+
         // Il y a 15 éléments à afficher par page.
         // Donc si on est sur la page 2, que qu'à paginate() on lui indique (en param) qu'il y 30 (ou moins) élements à paginer, hasMorePages() retournera false.
 
@@ -86,6 +95,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testOnFirstPage(): void
     {
+        $this->verifyInAllTests();
+
         // Il y a 15 éléments à afficher par page. Et on simule 28 élements à paginer.
         // Il y a 2 pages. On se positionne sur la page 1.
         Request::offsetSet(config('man-pagination.page_name'), 1);
@@ -129,6 +140,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testOnLastPage(): void
     {
+        $this->verifyInAllTests();
+
         // Il y a 15 éléments à afficher par page. Et on simule 28 élements à paginer.
         // Il y a 2 pages. On se positionne sur la page 1.
         Request::offsetSet(config('man-pagination.page_name'), 1);
@@ -164,6 +177,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testOsPage(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
@@ -194,6 +209,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testPreviousPageUrl(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
@@ -216,6 +233,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testNextPageUrl(): void
     {
+        $this->verifyInAllTests();
+
         // On simule qu'on se positionne sur la dernière page.
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
@@ -262,6 +281,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testFirstPageUrl(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
@@ -274,6 +295,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testLastPageUrl(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
@@ -286,6 +309,8 @@ class PaginationMethodsTest extends TestCase
 
     public function testUrl(): void
     {
+        $this->verifyInAllTests();
+
         Request::offsetSet(config('man-pagination.page_name'), 4);
 
         $pagination = new Pagination();
