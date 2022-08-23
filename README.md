@@ -36,8 +36,6 @@ $offset = $pagination->offset();
 
 ### Author
 
-[![Laravel Freelance](https://raw.githubusercontent.com/s-damian/medias/main/s-damian-logo.webp)](https://github.com/s-damian)
-
 This package is developed by [Stephen Damian](https://github.com/s-damian)
 
 ### Requirements
