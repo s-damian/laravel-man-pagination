@@ -76,29 +76,29 @@ php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginatio
 
 The **vendor:publish** command will generate these files:
 
-* /config/man-pagination.php
+* config/man-pagination.php
 
-* /lang/vendor/man-pagination/{lang}/pagination.php
+* lang/vendor/man-pagination/{lang}/pagination.php
 
-* /public/vendor/man-pagination/css/pagination.css
+* public/vendor/man-pagination/css/pagination.css
 
 You can of course customize these files.
 
 ### "vendor:publish" with "--tag" argument
 
-Publish only **config** file :
+Publish only **config** file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=config
 ```
 
-Publish only **lang** files :
+Publish only **lang** files:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=lang
 ```
 
-Publish only **CSS** file :
+Publish only **CSS** file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=css
@@ -348,7 +348,7 @@ In this pagination, I tried to keep the conventions and the behavior of the pagi
 
 ### I added extra "security":
 
-If for example there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9) :
+If for example there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9):
 
 * The **onLastPage()** method will return **false** (whereas with the pagination integrated in Laravel, it returns true).
 
