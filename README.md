@@ -38,7 +38,7 @@ $offset = $pagination->offset();
 
 [![Laravel Freelance](https://raw.githubusercontent.com/s-damian/medias/main/s-damian-logo.webp)](https://github.com/s-damian)
 
-This library is developed by [Stephen Damian](https://www.linkedin.com/in/stephen-damian/) [![Stephen Damian - LinkedIn](https://raw.githubusercontent.com/s-damian/medias/main/favicon-linkedin.png)](https://www.linkedin.com/in/stephen-damian/)
+This package is developed by [Stephen Damian](https://github.com/s-damian)
 
 ### Requirements
 
