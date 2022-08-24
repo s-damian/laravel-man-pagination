@@ -7,7 +7,7 @@
 [![Latest Stable Version](https://poser.pugx.org/s-damian/laravel-man-pagination/v/stable)](https://packagist.org/packages/s-damian/laravel-man-pagination)
 [![License](https://poser.pugx.org/s-damian/laravel-man-pagination/license)](https://packagist.org/packages/s-damian/laravel-man-pagination)
 
-### This package is concretely useful for paging with manual SELECT queries using "DB::select"
+### This package is concretely useful for paging with manual SELECT queries using DB::select()
 
 Laravel Man Pagination is a Open Source PHP library of a **simple manual pagination** (compatible with **Bootstrap 5**).
 
