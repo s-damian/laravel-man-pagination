@@ -7,7 +7,7 @@
 
 ## Laravel Manual Pagination - Laravel Man Pagination
 
-### Laravel Man Pagination package - Introduction
+### Introduction - Laravel Man Pagination package
 
 This package is concretely useful for paging with manual SELECT queries using DB::select()
 
