@@ -1,7 +1,8 @@
 {
     "name": "s-damian/laravel-man-pagination",
     "description": "Laravel Pagination library",
-    "keywords": ["php", "laravel", "pagination", "paginator"],
+    "type": "library",
+    "keywords": ["laravel", "pagination", "paginator", "php"],
     "license": "MIT",
     "authors": [
         {
