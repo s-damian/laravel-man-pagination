@@ -36,10 +36,6 @@ $offset = $pagination->offset();
 {!! $pagination->perPageForm() !!}
 ```
 
-Example rendering of a link in a table:
-
-[![Laravel Man Pagination](https://raw.githubusercontent.com/s-damian/medias/main/packages/laravel-man-pagination-example.webp)](https://github.com/s-damian/larasort)
-
 ### Author
 
 This package is developed by [Stephen Damian](https://github.com/s-damian)
@@ -210,6 +206,10 @@ $ordersAndInvoices = DB::select('
     LIMIT '.$limit.' OFFSET '.$offset
 );
 ```
+
+#### Example rendering of pagination:
+
+[![Laravel Man Pagination](https://raw.githubusercontent.com/s-damian/medias/main/packages/laravel-man-pagination-example.webp)](https://github.com/s-damian/larasort)
 
 ### Simple example with a manual SELECT query "DB::select"
 
