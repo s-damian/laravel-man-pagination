@@ -54,7 +54,7 @@ This package is developed by [Stephen Damian](https://github.com/s-damian)
 * [Examples](#examples)
 * [Differences with Laravel integrated pagination](#differences-with-Laravel-integrated-pagination)
 * [Support](#support)
-* [License](#license)
+* [Open Source License](#open-source-license)
 
 
 ## Installation
@@ -70,13 +70,13 @@ composer require s-damian/laravel-man-pagination
 
 ### Custom Config and Lang and CSS
 
-After installing the package, you can to run the **vendor:publish** command:
+After installing the package, you can to run the ```vendor:publish``` command:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider"
 ```
 
-The **vendor:publish** command will generate these files:
+The ```vendor:publish``` command will generate these files:
 
 * config/man-pagination.php
 
@@ -88,19 +88,19 @@ You can of course customize these files.
 
 ### "vendor:publish" with "--tag" argument
 
-Publish only **config** file:
+Publish only ```config``` file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=config
 ```
 
-Publish only **lang** files:
+Publish only ```lang``` files:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=lang
 ```
 
-Publish only **CSS** file:
+Publish only ```CSS``` file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=css
@@ -356,9 +356,9 @@ In this pagination, I tried to keep the conventions and the behavior of the pagi
 
 If for example there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9):
 
-* The **onLastPage()** method will return **false** (whereas with the pagination integrated in Laravel, it returns true).
+* The ```onLastPage()``` method will return ```false``` (whereas with the pagination integrated in Laravel, it returns true).
 
-* The **currentPage()** method will return **1** (whereas with the pagination integrated in Laravel, it returns it returns the page in the URL).
+* The ```currentPage()``` method will return ```1``` (whereas with the pagination integrated in Laravel, it returns it returns the page in the URL).
 
 
 ## Support
@@ -370,6 +370,6 @@ If you discover a bug or a security vulnerability, please send a message to Step
 All bugs and all security vulnerabilities will be promptly addressed.
 
 
-## License
+## Open Source License
 
 **Laravel Man Pagination** is Open Source software licensed under the MIT license.
