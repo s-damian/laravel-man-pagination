@@ -78,11 +78,11 @@ php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginatio
 
 The ```vendor:publish``` command will generate these files:
 
-* config/man-pagination.php
+* ```config/man-pagination.php```
 
-* lang/vendor/man-pagination/{lang}/pagination.php
+* ```lang/vendor/man-pagination/{lang}/pagination.php```
 
-* public/vendor/man-pagination/css/pagination.css
+* ```public/vendor/man-pagination/css/pagination.css```
 
 You can of course customize these files.
 
