@@ -9,7 +9,7 @@ use SDamian\LaravelManPagination\Contracts\PaginationInterface;
 /**
  * Rendering of the pagination.
  *
- * @author  Stephen Damian <contact@devandweb.fr>
+ * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
