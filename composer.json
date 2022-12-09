@@ -18,7 +18,7 @@
         "docs": "https://github.com/s-damian/laravel-man-pagination/blob/main/README.md"
     },
     "require": {
-        "php": "^8.0 || ^8.1 || ^8.2"
+        "php": "8.0.* || 8.1.* || 8.2.*"
     },
     "require-dev": {
         "laravel/framework": "^8 || ^9",
