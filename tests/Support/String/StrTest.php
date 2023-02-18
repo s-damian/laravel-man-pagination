@@ -8,7 +8,7 @@ use SDamian\LaravelManPagination\Support\String\Str;
 
 class StrTest extends TestCase
 {
-    public function testInputHiddenIfHasQueryString(): void
+    public function test_input_hidden_if_has_query_string(): void
     {
         $this->assertSame(
             '',

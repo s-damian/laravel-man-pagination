@@ -17,7 +17,7 @@ class PaginationTest extends TestCase
     /**
      * Test Pagination Instance Methods.
      */
-    public function testPagination(): void
+    public function test_pagination(): void
     {
         $this->verifyInAllTests();
 
@@ -55,7 +55,7 @@ class PaginationTest extends TestCase
     /**
      * Test other public methods than Pagination Instance Methods.
      */
-    public function testOtherPublicMethods(): void
+    public function test_other_public_methods(): void
     {
         $this->verifyInAllTests();
 

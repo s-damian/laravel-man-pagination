@@ -14,7 +14,7 @@ class PaginationMethodsTest extends TestCase
 {
     use ForAllTestsTrait;
 
-    public function testCurrentPage(): void
+    public function test_current_page(): void
     {
         $this->verifyInAllTests();
 
@@ -39,7 +39,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertSame(1, $pagination->currentPage()); // prend la valeur de 1 par défaut
     }
 
-    public function testHasPagesMethod(): void
+    public function test_has_pages_method(): void
     {
         $this->verifyInAllTests();
 
@@ -69,7 +69,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertSame(1, $pagination->lastPage()); // la pagination génère bien qu'une seule page
     }
 
-    public function testHasMorePagesMethod(): void
+    public function test_has_more_pages_method(): void
     {
         $this->verifyInAllTests();
 
@@ -93,7 +93,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertFalse($pagination->hasMorePages());
     }
 
-    public function testOnFirstPage(): void
+    public function test_on_first_page(): void
     {
         $this->verifyInAllTests();
 
@@ -138,7 +138,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertTrue($pagination->onFirstPage()); // par défaut, la pagination nous met bien sur la 1ère page
     }
 
-    public function testOnLastPage(): void
+    public function test_on_last_page(): void
     {
         $this->verifyInAllTests();
 
@@ -175,7 +175,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertFalse($pagination->onLastPage()); // nous ne sommes pas sur la dernière page (nous somme sur une page d'après, donc une page qui n'existe pas)
     }
 
-    public function testOsPage(): void
+    public function test_os_page(): void
     {
         $this->verifyInAllTests();
 
@@ -207,7 +207,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertTrue($pagination->onPage(1)); // ici par "sécurité" ça vaut bien true
     }
 
-    public function testPreviousPageUrl(): void
+    public function test_previous_page_url(): void
     {
         $this->verifyInAllTests();
 
@@ -231,7 +231,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertTrue($pagination->previousPageUrl() === null);
     }
 
-    public function testNextPageUrl(): void
+    public function test_next_page_url(): void
     {
         $this->verifyInAllTests();
 
@@ -279,7 +279,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertSame('2', $ex[1]); // page par défaut (page 1) + (plus) 1 = 2
     }
 
-    public function testFirstPageUrl(): void
+    public function test_first_page_url(): void
     {
         $this->verifyInAllTests();
 
@@ -293,7 +293,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertSame('1', $ex[1]);
     }
 
-    public function testLastPageUrl(): void
+    public function test_last_page_url(): void
     {
         $this->verifyInAllTests();
 
@@ -307,7 +307,7 @@ class PaginationMethodsTest extends TestCase
         $this->assertSame('7', $ex[1]); // il y a 7 pages
     }
 
-    public function testUrl(): void
+    public function test_url(): void
     {
         $this->verifyInAllTests();
 

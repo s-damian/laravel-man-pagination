@@ -17,7 +17,7 @@ class PaginationOptionsTest extends TestCase
     /**
      * We test the options (with the default values).
      */
-    public function testPaginationWithOptionsDefault(): void
+    public function test_pagination_with_options_default(): void
     {
         $this->verifyInAllTests();
 
@@ -50,7 +50,7 @@ class PaginationOptionsTest extends TestCase
     /**
      * We test the options (we change all the values).
      */
-    public function testPaginationWithOptionsChanged(): void
+    public function test_pagination_with_options_changed(): void
     {
         $this->verifyInAllTests();
 
