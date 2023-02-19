@@ -3,14 +3,15 @@
 namespace SDamian\LaravelManPagination;
 
 use Illuminate\Support\Facades\Request;
-use SDamian\LaravelManPagination\Support\String\Str;
 use SDamian\LaravelManPagination\Contracts\PaginationInterface;
+use SDamian\LaravelManPagination\Support\String\Str;
 
 /**
  * Rendering of the pagination.
  *
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
 abstract class RendererGenerator
@@ -58,7 +59,7 @@ abstract class RendererGenerator
     /**
      * To choose the number of items to display per page.
      *
-     * @param array<string, string> $options
+     * @param  array<string, string>  $options
      * - $options['action'] string : For the action of the form.
      */
     final public function perPageForm(array $options = []): string

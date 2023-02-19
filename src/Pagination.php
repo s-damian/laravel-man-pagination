@@ -10,6 +10,7 @@ use SDamian\LaravelManPagination\Contracts\PaginationInterface;
  *
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
 class Pagination implements PaginationInterface
@@ -110,7 +111,7 @@ class Pagination implements PaginationInterface
     public const REGEX_INTEGER = '/^[0-9]+$/';
 
     /**
-     * @param array<mixed> $options
+     * @param  array<mixed>  $options
      */
     public function __construct(array $options = [])
     {
@@ -132,15 +133,15 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * @param array<mixed> $options
+     * @param  array<mixed>  $options
      */
     private function extractOptions(array $options = []): void
     {
-        $this->defaultPerPage = isset($options['pp']) && is_integer($options['pp'])
+        $this->defaultPerPage = isset($options['pp']) && is_int($options['pp'])
             ? $options['pp']
             : (int) config('man-pagination.default_per_page');
 
-        $this->numberLinks = isset($options['number_links']) && is_integer($options['number_links'])
+        $this->numberLinks = isset($options['number_links']) && is_int($options['number_links'])
             ? $options['number_links']
             : (int) config('man-pagination.number_links');
 
@@ -172,7 +173,7 @@ class Pagination implements PaginationInterface
     /**
      * Activate pagination.
      *
-     * @param int $total - Number of elements to paginate.
+     * @param  int  $total - Number of elements to paginate.
      */
     public function paginate(int $total): void
     {
@@ -553,7 +554,7 @@ class Pagination implements PaginationInterface
     /**
      * Render the "per page" in HTML format.
      *
-     * @param array<string, string> $options
+     * @param  array<string, string>  $options
      * - $options['action'] string : For the action of the form.
      */
     public function perPageForm(array $options = []): string

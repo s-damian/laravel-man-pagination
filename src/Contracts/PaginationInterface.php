@@ -5,12 +5,13 @@ namespace SDamian\LaravelManPagination\Contracts;
 /**
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
 interface PaginationInterface
 {
     /**
-     * @param array<mixed> $options
+     * @param  array<mixed>  $options
      */
     public function __construct(array $options = []);
 
@@ -84,7 +85,7 @@ interface PaginationInterface
     public function links(): string;
 
     /**
-     * @param array<string, string> $options
+     * @param  array<string, string>  $options
      */
     public function perPageForm(array $options = []): string;
 }

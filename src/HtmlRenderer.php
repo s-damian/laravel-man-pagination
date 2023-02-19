@@ -7,6 +7,7 @@ namespace SDamian\LaravelManPagination;
  *
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
 final class HtmlRenderer extends RendererGenerator
@@ -16,7 +17,7 @@ final class HtmlRenderer extends RendererGenerator
         $html = '';
 
         $html .= '<nav>';
-        $html .=     '<ul class="'.$this->pagination->getCssClassP().'">';
+        $html .= '<ul class="'.$this->pagination->getCssClassP().'">';
 
         return $html;
     }
@@ -33,9 +34,9 @@ final class HtmlRenderer extends RendererGenerator
         $href = 'href="'.$this->pagination->previousPageUrl().'"';
 
         $html .= '<li class="page-item'.$addCss.'">';
-        $html .=     '<a class="page-link" '.$href.' rel="prev" aria-label="&laquo; '.trans('man-pagination::pagination.text_previous').'">';
-        $html .=         '&lsaquo;';
-        $html .=     '</a>';
+        $html .= '<a class="page-link" '.$href.' rel="prev" aria-label="&laquo; '.trans('man-pagination::pagination.text_previous').'">';
+        $html .= '&lsaquo;';
+        $html .= '</a>';
         $html .= '</li>';
 
         return $html;
@@ -56,9 +57,9 @@ final class HtmlRenderer extends RendererGenerator
             $href = 'href="'.$this->pagination->firstPageUrl().'"';
 
             $html .= '<li class="page-item">';
-            $html .=     '<a class="page-link" '.$href.'>';
-            $html .=         '1';
-            $html .=     '</a>';
+            $html .= '<a class="page-link" '.$href.'>';
+            $html .= '1';
+            $html .= '</a>';
             $html .= '</li>';
             $html .= $dots;
         }
@@ -92,9 +93,9 @@ final class HtmlRenderer extends RendererGenerator
 
             $html .= $dots;
             $html .= '<li class="page-item">';
-            $html .=     '<a class="page-link" '.$href.'>';
-            $html .=         $this->pagination->getNbPages();
-            $html .=     '</a>';
+            $html .= '<a class="page-link" '.$href.'>';
+            $html .= $this->pagination->getNbPages();
+            $html .= '</a>';
             $html .= '</li>';
         }
 
@@ -113,9 +114,9 @@ final class HtmlRenderer extends RendererGenerator
         $href = 'href="'.$this->pagination->nextPageUrl().'"';
 
         $html .= '<li class="page-item'.$addCss.'">';
-        $html .=     '<a class="page-link" '.$href.' rel="next" aria-label="'.trans('man-pagination::pagination.text_next').' &raquo;">';
-        $html .=         '&rsaquo;';
-        $html .=     '</a>';
+        $html .= '<a class="page-link" '.$href.' rel="next" aria-label="'.trans('man-pagination::pagination.text_next').' &raquo;">';
+        $html .= '&rsaquo;';
+        $html .= '</a>';
         $html .= '</li>';
 
         return $html;
@@ -125,7 +126,7 @@ final class HtmlRenderer extends RendererGenerator
     {
         $html = '';
 
-        $html .=     '</ul>';
+        $html .= '</ul>';
         $html .= '</nav>';
 
         return $html;

@@ -2,10 +2,10 @@
 
 namespace SDamian\Tests\LaravelManPagination;
 
-use SDamian\Tests\TestCase;
 use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Pagination;
 use SDamian\Tests\LaravelManPagination\Traits\ForAllTestsTrait;
+use SDamian\Tests\TestCase;
 
 /**
  * We test the options of the constructor.

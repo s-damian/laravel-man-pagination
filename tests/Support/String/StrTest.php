@@ -2,9 +2,9 @@
 
 namespace SDamian\Tests\LaravelManPagination\Support\String;
 
-use SDamian\Tests\TestCase;
 use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Support\String\Str;
+use SDamian\Tests\TestCase;
 
 class StrTest extends TestCase
 {

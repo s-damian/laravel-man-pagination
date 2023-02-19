@@ -7,12 +7,13 @@ use Illuminate\Support\Facades\Request;
 /**
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
+ *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
 class Str
 {
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      * - $options['except'] array
      */
     public static function inputHiddenIfHasQueryString(array $options = []): string
