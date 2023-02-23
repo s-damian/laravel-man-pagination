@@ -1,8 +1,8 @@
 parameters:
   level: 9
   paths:
-    - "../../src"
-    - "../../tests"
+    - "./src"
+    - "./tests"
   ignoreErrors:
     - '#Binary operation "." between non-empty-string and array|Illuminate\\Contracts\\Translation\\Translator|string|null results in an error.#'
     - '#Cannot cast mixed to int.#'

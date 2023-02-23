@@ -67,7 +67,7 @@ abstract class RendererGenerator
         $html = '';
 
         if ($this->pagination->total() > $this->pagination->getDefaultPerPage()) {
-            $actionPerPage = isset($options['action']) && is_string($options['action']) ? $options['action'] : Request::url();
+            $actionPerPage = isset($options['action']) && is_string($options['action']) ? $options['action'] : Request::url(); // @phpstan-ignore-line
 
             /** @var HtmlRenderer $this */
             $onChange = ! Request::ajax() ? $this->perPageOnchange() : '';
