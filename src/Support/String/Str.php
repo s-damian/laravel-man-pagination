@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SDamian\LaravelManPagination\Support\String;
 
 use Illuminate\Support\Facades\Request;
