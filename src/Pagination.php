@@ -17,6 +17,10 @@ use SDamian\LaravelManPagination\Contracts\PaginationInterface;
  */
 class Pagination implements PaginationInterface
 {
+    public const PER_PAGE_OPTION_ALL = 'all';
+
+    public const REGEX_INTEGER = '/^[0-9]+$/';
+
     private ?int $getP = null;
 
     /**
@@ -107,10 +111,6 @@ class Pagination implements PaginationInterface
     private string $cssIdPP;
 
     private HtmlRenderer $htmlRenderer;
-
-    public const PER_PAGE_OPTION_ALL = 'all';
-
-    public const REGEX_INTEGER = '/^[0-9]+$/';
 
     /**
      * @param  array<mixed>  $options
