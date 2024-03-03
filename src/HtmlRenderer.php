@@ -154,7 +154,7 @@ final class HtmlRenderer extends RendererGenerator
         return '<select '.$onChange.' name="'.$this->pagination->getPerPageName().'" id="nb-perpage">';
     }
 
-    protected function perPageOption(string $selected, string $valuePP, string $all = null): string
+    protected function perPageOption(string $selected, string $valuePP, ?string $all = null): string
     {
         $nb = $all ?? $valuePP;
 

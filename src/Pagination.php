@@ -175,7 +175,7 @@ class Pagination implements PaginationInterface
     /**
      * Activate pagination.
      *
-     * @param  int  $total - Number of elements to paginate.
+     * @param  int  $total  - Number of elements to paginate.
      */
     public function paginate(int $total): void
     {
@@ -290,8 +290,8 @@ class Pagination implements PaginationInterface
      * items "nb start" to "nb end" on this page
      *
      * @return array<string, int> - Array associatif
-     *    'from' => nb start
-     *    'to' => nb end
+     *                            'from' => nb start
+     *                            'to' => nb end
      */
     private function getFromTo(): array
     {
@@ -557,7 +557,7 @@ class Pagination implements PaginationInterface
      * Render the "per page" in HTML format.
      *
      * @param  array<string, string>  $options
-     * - $options['action'] string : For the action of the form.
+     *                                          - $options['action'] string : For the action of the form.
      */
     public function perPageForm(array $options = []): string
     {
