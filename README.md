@@ -24,7 +24,7 @@ With this pagination, you will have no limit in a Laravel project to manage pagi
 
 This pagination also allows you to generate a **per page**. This will generate a form HTML tag with a select HTML tag and clickable options.
 
-> Paginate easily without limit!
+> Paginate easily without limit 🚀
 ```php
 <?php
 
@@ -49,7 +49,7 @@ This package is developed by [Stephen Damian](https://github.com/s-damian)
 
 ### Requirements
 
-* PHP 8.0 || 8.1 || 8.2
+* PHP 8.0 || 8.1 || 8.2 || 8.3
 * Laravel 8 || 9 || 10
 
 
