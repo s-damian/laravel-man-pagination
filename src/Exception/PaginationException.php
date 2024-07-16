@@ -12,6 +12,4 @@ use Exception;
  *
  * @link    https://github.com/s-damian/laravel-man-pagination
  */
-final class PaginationException extends Exception
-{
-}
+final class PaginationException extends Exception {}

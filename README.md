@@ -8,7 +8,7 @@
 
 [![Tests](https://github.com/s-damian/laravel-man-pagination/actions/workflows/tests.yml/badge.svg)](https://github.com/s-damian/laravel-man-pagination/actions/workflows/tests.yml)
 [![Static analysis](https://github.com/s-damian/laravel-man-pagination/actions/workflows/static-analysis.yml/badge.svg)](https://github.com/s-damian/laravel-man-pagination/actions/workflows/static-analysis.yml)
-[![Total Downloads](http://poser.pugx.org/s-damian/laravel-man-pagination/downloads)](https://packagist.org/packages/s-damian/laravel-man-pagination)
+[![Total Downloads](https://poser.pugx.org/s-damian/laravel-man-pagination/downloads)](https://packagist.org/packages/s-damian/laravel-man-pagination)
 [![Latest Stable Version](https://poser.pugx.org/s-damian/laravel-man-pagination/v/stable)](https://packagist.org/packages/s-damian/laravel-man-pagination)
 [![License](https://poser.pugx.org/s-damian/laravel-man-pagination/license)](https://packagist.org/packages/s-damian/laravel-man-pagination)
 
