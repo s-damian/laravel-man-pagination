@@ -4,5 +4,11 @@ parameters:
     - "./src"
     - "./tests"
   ignoreErrors:
-    - '#Binary operation "." between non-empty-string and array|Illuminate\\Contracts\\Translation\\Translator|string|null results in an error.#'
+    - '#Binary operation "." between non-empty-string and array|Illuminate\\Contracts\\Translation\\Translator\|string\|null results in an error.#'
     - '#Cannot cast mixed to int.#'
+    - '#Cannot cast mixed to string.#'
+    - '#Parameter \#1 \$key of static method Illuminate\\Support\\Facades\\Request::has\(\) expects array\|string, mixed given#'
+    - '#Parameter \#1 \$key of static method Illuminate\\Support\\Facades\\Request::query\(\) expects string\|null, mixed given.#'
+    - '#Parameter \#1 \$offset of static method Illuminate\\Support\\Facades\\Request::offsetSet\(\) expects string, mixed given.#'
+    - '#Parameter \#1 \$valuePP of method SDamian\\LaravelManPagination\\RendererGenerator::generateOption\(\) expects int\|string, mixed given.#'
+    - '#Parameter \#3 \$all of method SDamian\\LaravelManPagination\\HtmlRenderer::perPageOption\(\) expects string\|null, array\|Illuminate\\Contracts\\Translation\\Translator\|string\|null given.#'
