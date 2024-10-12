@@ -16,7 +16,7 @@
 
 ### Introduction - Laravel Man Pagination package
 
-This package is concretely useful for paging with manual SELECT queries using DB::select()
+This package is particularly useful for implementing pagination with manual SELECT queries using `DB::select()`.
 
 Laravel Man Pagination is a Open Source PHP library of a **simple manual pagination** (compatible with **Bootstrap 5**).
 
@@ -79,37 +79,37 @@ composer require s-damian/laravel-man-pagination
 
 ### Custom Config and Lang and CSS
 
-After installing the package, you can to run the ```vendor:publish``` command:
+After installing the package, you can run the `vendor:publish` command:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider"
 ```
 
-The ```vendor:publish``` command will generate these files:
+The `vendor:publish` command will generate these files:
 
-* ```config/man-pagination.php```
+* `config/man-pagination.php`
 
-* ```lang/vendor/man-pagination/{lang}/pagination.php```
+* `lang/vendor/man-pagination/{lang}/pagination.php`
 
-* ```public/vendor/man-pagination/css/pagination.css```
+* `public/vendor/man-pagination/css/pagination.css`
 
 You can of course customize these files.
 
 ### "vendor:publish" with "--tag" argument
 
-Publish only ```config``` file:
+Publish only `config` file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=config
 ```
 
-Publish only ```lang``` files:
+Publish only `lang` files:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=lang
 ```
 
-Publish only ```CSS``` file:
+Publish only `CSS` file:
 
 ```
 php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginationServiceProvider" --tag=css
@@ -321,7 +321,7 @@ class CustomerController extends Controller
 ```php
 <?php
 
-// To change number of Elements per page:
+// To change the number of elements per page:
 $pagination = new Pagination(['pp' => 50]);
 // Is 15 by default
 
@@ -365,9 +365,9 @@ In this pagination, I tried to keep the conventions and the behavior of the pagi
 
 If for example there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9):
 
-* The ```onLastPage()``` method will return ```false``` (whereas with the pagination integrated in Laravel, it returns true).
+* The `onLastPage()` method will return `false` (whereas with the pagination integrated in Laravel, it returns true).
 
-* The ```currentPage()``` method will return ```1``` (whereas with the pagination integrated in Laravel, it returns it returns the page in the URL).
+* The `currentPage()` method will return `1` (whereas with the pagination integrated in Laravel, it returns it returns the page in the URL).
 
 
 ## Support
@@ -381,4 +381,4 @@ All bugs and all security vulnerabilities will be promptly addressed.
 
 ## License
 
-This project is an Open Source package under the MIT license. See the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
