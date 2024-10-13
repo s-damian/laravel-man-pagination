@@ -38,7 +38,7 @@ This pagination also allows you to generate a per page form. This will generate 
 ```php
 <?php
 
-$pagination = new SDamian\LaravelManPagination\Pagination();
+$pagination = new \SDamian\LaravelManPagination\Pagination();
 
 $pagination->paginate($totalElements); // $totalElements: result of an SQL COUNT query
 
