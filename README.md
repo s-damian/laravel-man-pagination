@@ -18,11 +18,11 @@
 
 This package is particularly useful for implementing pagination with manual SELECT queries using `DB::select()`.
 
-Laravel Man Pagination is a Open Source PHP library of a **simple manual pagination** (compatible with **Bootstrap 5**).
+Laravel Man Pagination is an Open Source PHP library of a **simple manual pagination** (compatible with **Bootstrap 5**).
 
-With this pagination, you will have no limit in a Laravel project to manage paginations.
+With this pagination, you will have no limits in a Laravel project to manage paginations.
 
-This pagination also allows you to generate a **per page**. This will generate a form HTML tag with a select HTML tag and clickable options.
+This pagination also allows you to generate a per page form. This will generate a form HTML tag with a select HTML tag and clickable options.
 
 ### Key Features
 
@@ -162,7 +162,7 @@ php artisan vendor:publish --provider="SDamian\LaravelManPagination\ManPaginatio
 
 When doing "complex" SQL queries, sometimes you prefer to do it without Eloquent.
 
-Here is an example of SQL query where this library is really useful:
+Here is an example of an SQL query where this library is really useful:
 
 ```php
 use SDamian\LaravelManPagination\Pagination;
@@ -344,7 +344,7 @@ $pagination = new Pagination(['number_links' => 10]);
 
 // To change the choice to select potentially generate with perPageForm():
 $pagination = new Pagination(['options_select' => [5, 10, 50, 100, 500, 'all']]);
-// The value of 'options_select' must be a array.
+// The value of 'options_select' must be an array.
 // Only integers and 'all' are permitted.
 // Options are [15, 30, 50, 100, 200, 300] by default.
 
@@ -376,10 +376,10 @@ In this pagination, I tried to keep the conventions and the behavior of the pagi
 
 ### I Added Extra "Security":
 
-If for example there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9):
+If, for example, there are only 8 pages, and in the URL the visitor tries to go to page 9 (or to a page after page 9):
 
 - The `onLastPage()` method will return `false` (whereas with the pagination integrated in Laravel, it returns true).
-- The `currentPage()` method will return `1` (whereas with the pagination integrated in Laravel, it returns it returns the page in the URL).
+- The `currentPage()` method will return `1` (whereas with the pagination integrated in Laravel, it returns the page in the URL).
 
 
 ## Support
