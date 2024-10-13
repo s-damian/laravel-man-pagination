@@ -9,7 +9,7 @@ use SDamian\LaravelManPagination\Contracts\PaginationInterface;
 use SDamian\LaravelManPagination\Support\String\Str;
 
 /**
- * Rendering of the pagination.
+ * Renders the pagination.
  *
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
@@ -18,6 +18,8 @@ use SDamian\LaravelManPagination\Support\String\Str;
  */
 abstract class RendererGenerator
 {
+    private const SELECTED = 'selected';
+
     protected PaginationInterface $pagination;
 
     final public function __construct(PaginationInterface $pagination)
@@ -26,7 +28,7 @@ abstract class RendererGenerator
     }
 
     /**
-     * To display the pagination.
+     * Displays the pagination.
      */
     final public function links(): string
     {
@@ -59,16 +61,17 @@ abstract class RendererGenerator
     }
 
     /**
-     * To choose the number of items to display per page.
+     * Renders the "per page" form in HTML format.
      *
      * @param  array<string, string>  $options
-     *                                          - $options['action'] string : For the action of the form.
+     *                                          - 'action' (string): The action attribute of the form.
      */
     final public function perPageForm(array $options = []): string
     {
         $html = '';
 
         if ($this->pagination->total() > $this->pagination->getDefaultPerPage()) {
+            // Determine the form action URL.
             $actionPerPage = isset($options['action']) && is_string($options['action']) ? $options['action'] : Request::url(); // @phpstan-ignore-line
 
             /** @var HtmlRenderer $this */
@@ -92,14 +95,20 @@ abstract class RendererGenerator
         return $html;
     }
 
+    /**
+     * Generates an option element for the per-page select input.
+     *
+     * @param  int|string  $valuePP  The value for the option element.
+     * @return string The HTML for the option element.
+     */
     private function generateOption(int|string $valuePP): string
     {
         $html = '';
 
         if ($this->pagination->getGetPP() !== null) {
-            $selected = $valuePP === $this->pagination->getGetPP() ? 'selected' : '';
+            $selected = $valuePP === $this->pagination->getGetPP() ? self::SELECTED : '';
         } else {
-            $selected = $valuePP === $this->pagination->getDefaultPerPage() ? 'selected' : '';
+            $selected = $valuePP === $this->pagination->getDefaultPerPage() ? self::SELECTED : '';
         }
 
         /** @var HtmlRenderer $this */

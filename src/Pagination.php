@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Request;
 use SDamian\LaravelManPagination\Contracts\PaginationInterface;
 
 /**
- * For generate a pagination.
+ * Generates pagination.
  *
  * @author  Stephen Damian <contact@damian-freelance.fr>
  * @license http://www.opensource.org/licenses/mit-license.php MIT
@@ -24,7 +24,7 @@ class Pagination implements PaginationInterface
     private ?int $getP = null;
 
     /**
-     * @var null|int|string - If 'all' in URL, it will be a string.
+     * @var null|int|string Holds the 'per page' value from the URL. If 'all' is specified in the URL, it will be a string.
      */
     private null|int|string $getPP = null;
 
@@ -173,7 +173,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Activate pagination.
+     * Activates pagination.
      *
      * @param  int  $total  - Number of elements to paginate.
      */
@@ -199,7 +199,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Processing the number of items per page (for <select>).
+     * Handles the per page value (for the <select> element).
      */
     private function treatmentPerPage(): void
     {
@@ -220,7 +220,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * For assign the limit and the offset.
+     * Assigns the limit and the offset.
      */
     private function setLimitAndSetOffset(): void
     {
@@ -244,7 +244,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of elements on which to paginate.
+     * Returns the number of elements to paginate.
      */
     public function total(): int
     {
@@ -252,24 +252,20 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of items on the current page.
+     * Returns the number of items on the current page.
      */
     public function count(): int
     {
         if ($this->total < $this->perPage || $this->perPage === null) {
             return $this->total;
-        } else {
-            if ($this->hasMorePages()) {
-                return $this->perPage;
-            } else {
-                return $this->getCountOnLastPage();
-            }
         }
+
+        return $this->hasMorePages() ? $this->perPage : $this->getCountOnLastPage();
     }
 
     /**
-     * To return the indexing of the first element on the current page.
-     * items "nb start" to ...
+     * Returns the index of the first item on the current page.
+     * Items "nb start" to ...
      */
     public function firstItem(): int
     {
@@ -277,8 +273,8 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the indexing of the last element on the current page.
-     * items ... to "nb end"
+     * Returns the index of the last item on the current page.
+     * Items ... to "nb end"
      */
     public function lastItem(): int
     {
@@ -286,12 +282,12 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the indexing of the first element and the indexing of the last element on the current page.
-     * items "nb start" to "nb end" on this page
+     * Returns the indexes of the first and last items on the current page.
+     * Items "nb start" to "nb end" on this page.
      *
-     * @return array<string, int> - Array associatif
-     *                            'from' => nb start
-     *                            'to' => nb end
+     * @return array<string, int> - Associative array:
+     *                            'from' => start index,
+     *                            'to'   => end index
      */
     private function getFromTo(): array
     {
@@ -314,7 +310,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of items on the last page.
+     * Returns the number of items on the last page.
      */
     private function getCountOnLastPage(): int
     {
@@ -326,7 +322,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the current page.
+     * Returns the current page number.
      */
     public function currentPage(): int
     {
@@ -334,7 +330,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of pages.
+     * Returns the total number of pages.
      */
     public function getNbPages(): int
     {
@@ -342,8 +338,8 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Get the page number of the last available page.
-     * Same of getNbPages() (for Laravel conventions)
+     * Gets the page number of the last available page.
+     * Same as getNbPages() (for Laravel conventions).
      */
     public function lastPage(): int
     {
@@ -351,7 +347,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of items displayed per page.
+     * Returns the number of items displayed per page.
      */
     public function perPage(): ?int
     {
@@ -359,7 +355,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return the number of items displayed per page by default.
+     * Returns the default number of items displayed per page.
      */
     public function getDefaultPerPage(): ?int
     {
@@ -367,7 +363,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return true if there are enough items to split into multiple pages.
+     * Returns true if there are enough items to split into multiple pages.
      */
     public function hasPages(): bool
     {
@@ -375,7 +371,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return true if there are pages left after the current one.
+     * Returns true if there are pages left after the current one.
      */
     public function hasMorePages(): bool
     {
@@ -383,7 +379,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return true if we are on the first page.
+     * Returns true if we are on the first page.
      */
     public function onFirstPage(): bool
     {
@@ -395,7 +391,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return true if we are on the last page.
+     * Returns true if we are on the last page.
      */
     public function onLastPage(): bool
     {
@@ -403,7 +399,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * To return true si on est sur un numéro de page donné.
+     * Returns true if we are on a given page number.
      */
     public function onPage(int $nb): bool
     {
@@ -524,7 +520,9 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * "Limit the start". pageStart, any clickable links that will be after the current page.
+     * Limit the start".
+     * Sets the starting page number for pagination links.
+     * Determines the first page number to display based on the current page and the number of links.
      */
     private function setPageStart(): self
     {
@@ -540,7 +538,9 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * "Limit the end". pageEnd, any clickable links that will be before the current page.
+     * Limit the end".
+     * Sets the ending page number for pagination links.
+     * Determines the last page number to display based on the current page and the number of links.
      */
     private function setPageEnd(): void
     {
@@ -554,10 +554,10 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Render the "per page" in HTML format.
+     * Renders the "per page" form in HTML format.
      *
-     * @param  array<string, string>  $options
-     *                                          - $options['action'] string : For the action of the form.
+     * @param  array<string, string>  $options  - Options for the form.
+     *                                          - 'action': string, The action attribute of the form.
      */
     public function perPageForm(array $options = []): string
     {

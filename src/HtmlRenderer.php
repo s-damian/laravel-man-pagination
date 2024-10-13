@@ -18,14 +18,14 @@ final class HtmlRenderer extends RendererGenerator
     {
         $html = '';
 
-        $html .= '<nav>';
+        $html .= '<nav aria-label="Pagination">';
         $html .= '<ul class="'.$this->pagination->getCssClassP().'">';
 
         return $html;
     }
 
     /**
-     * If you are not on the 1st page, display: the left arrow (previous page).
+     * If you are not on the first page, display the left arrow (previous page).
      */
     protected function previousLink(): string
     {
@@ -45,7 +45,7 @@ final class HtmlRenderer extends RendererGenerator
     }
 
     /**
-     * If you are not on the 1st page, make it appear: go to first page.
+     * If you are not on the first page, display a link to go to the first page.
      */
     protected function firstLink(): string
     {
@@ -80,7 +80,7 @@ final class HtmlRenderer extends RendererGenerator
     }
 
     /**
-     * If you are not on the last page, display: go to last page.
+     * If you are not on the last page, display a link to go to the last page.
      */
     protected function lastLink(): string
     {
@@ -105,7 +105,7 @@ final class HtmlRenderer extends RendererGenerator
     }
 
     /**
-     * If you are not on the last page, display: the right arrow (next page).
+     * If you are not on the last page, display the right arrow (next page).
      */
     protected function nextLink(): string
     {
