@@ -520,7 +520,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Limit the start".
+     * "Limit the start".
      * Sets the starting page number for pagination links.
      * Determines the first page number to display based on the current page and the number of links.
      */
@@ -538,7 +538,7 @@ class Pagination implements PaginationInterface
     }
 
     /**
-     * Limit the end".
+     * "Limit the end".
      * Sets the ending page number for pagination links.
      * Determines the last page number to display based on the current page and the number of links.
      */
